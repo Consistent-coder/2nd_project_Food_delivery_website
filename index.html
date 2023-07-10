@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Delivery</title>
+    <style>
+
+        body {
+            overflow: scroll;
+            height: fit-content;
+            /*css reset*/
+            margin: 0px;
+            padding: 0px;
+            background:url('./bg_wooden_floor.jpg');
+            width:100%;
+        }
+
+      
+
+        .navbar>img {
+          /*  border: 2px solid black;*/
+            position: relative;
+        
+            margin-top: 0px;
+            height: 50vh;
+            width: 100vw;
+            width: 100%;
+        }
+
+        .navbar>div {
+            justify-self: center;
+        }
+
+        .nav {
+            display: flex;
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            border-bottom: 2px solid rebeccapurple;
+            justify-content: center;
+            gap: 100px;
+            font-size: 25px;
+            z-index: 2;
+        }
+       .nav div>a{
+        padding: 5px 22px;;
+        position: relative;
+        top:35px;
+        text-decoration: none;
+        color: aliceblue;
+       }
+        .nav::before{
+            content: "";
+            background-color: black;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -3;
+            opacity: 0.7;
+        }
+        .nav div>a:hover{
+            color: green;
+            font-size: larger;
+            border: 2px solid whitesmoke;
+            border-radius: 100px;
+            background-color: bisque;
+        }
+        .box {
+            position: relative;
+            left: 70px;
+            display: grid;
+          /*  border: 2px solid black;*/
+            height: 70vh;
+            width: 90vw;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            justify-content: space-evenly;
+            gap: 50px;
+
+        }
+
+     
+        #sub1>p{
+            
+            position: relative;
+            
+            bottom:21px;
+        }
+        #sub1>img{
+            width: 120px;
+            height: 80px;
+            margin-left:60px ;
+            margin-right: 80px ;
+        }
+        #sub2>p{
+            
+            position: relative;
+            
+            bottom:21px;
+        }
+        #sub2>img{
+            width: 120px;
+            height: 80px;
+            margin-left:60px ;
+            margin-right: 80px ;
+        }
+        #sub3>p{
+            
+            position: relative;
+            
+            bottom:21px;
+        }
+        #sub3>img{
+            width: 120px;
+            height: 80px;
+            margin-left:60px ;
+            margin-right: 80px ;
+        }
+        .sub {
+            border: 5px solid rgb(213, 81, 81);
+            background-color: rgb(244, 212, 216);
+            border-radius: 50px;
+            text-align: center;
+            height: 400px;
+        }
+        .sub::before{
+            content: "";
+            opacity: 0.1;
+        }
+        .contact {
+            border: 2px solid blue;
+            width: 100vw;
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('./contact_image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+        .contact>h4{
+            
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            color: cornsilk;
+            margin-bottom: 20px;
+        }
+        .contact>input{
+            padding: 10px 10px;
+            width: 520px;
+           height: 15px;
+           border-radius: 50px;
+           font-size: 14px;
+           font-weight: 600;
+        }
+        .contact>textarea{
+            padding: 10px 10px;
+            width: 520px;
+           height: 70px;
+           border-radius: 20px;
+           font-size: larger;
+        }
+        .mainbar {
+            background-color: white;
+            position: relative;
+            top:100px;
+         /*   border: 2px solid black;*/
+            display: grid;
+            width: fit-content;
+            height: fit-content;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .logo {
+          /*  border: 2px solid blue;*/
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            background-repeat: no-repeat;
+            background-size: 300px;
+            justify-content: center;
+            gap:150px;
+        }
+        .home{
+            display: block;
+          /* justify-content: center;*/
+           position: relative;
+           bottom:42px;
+        }
+        .logo>img{
+            height: 100px;
+            width: 150px;
+            margin-left: 100px;
+            margin-top: 10px;
+            display: inline-block;
+            /*position: relative;
+            top:30px;
+            left: 550px;*/
+            border-radius: 360px;
+            border-bottom-right-radius: 20px;
+           
+        }
+        .home>h4{
+            display: block;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 10px ;
+        }
+        .home>p{
+            font-size: 18px;
+            text-align: center;
+            margin-left: 90px;
+            padding-bottom: 70px;
+            height: 50px;
+            width: 300px;
+        }
+        button>a{
+            padding: 7px 100px;
+            text-decoration: none;
+            font-size: large;
+            color: aliceblue;
+            border: none;
+        }
+        button:hover{
+
+            background-color: gray;   
+            padding: 3px 3px;
+        }
+        button>a:hover{
+            color:blue;
+        }
+        button{
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+            margin-left: 90px;
+            justify-content: center;
+            text-align: center;
+            border-radius: 250px;
+            background-color: rgb(23, 21, 21);
+        }
+        .logo>input{
+            align-self: start;
+            border: 2px solid burlywood;
+            border-radius: 30px;
+            width: 220px;
+            padding: 10px 150px;
+            padding-left: 5px;
+            display: block;
+            position: relative;
+            left: 40px;
+            bottom:100px;
+            content: "";
+            background-color: silver;
+            font-weight: 400;
+            color: black;
+            font-size: 18px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            z-index: 3;
+        }
+        .logo>input::before{
+            opacity: 0.1;
+        }
+        .boxmain{
+            height: fit-content;
+            position: relative;
+            top: 80px;
+        }
+        .boxmain>h4{
+          
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            color: cornsilk;
+        }
+        
+        .fet {
+            /*border: 2px solid black;*/
+            width: 100%;
+            height: fit-content;
+        }
+        .fetur {
+            border: 2px solid black;
+            border: 5px solid rebeccapurple;
+            width: 100%;
+            padding: 3px;
+            height: 300px;
+            background-color:aliceblue;
+            position: relative;
+            bottom: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        .fetur>img{
+            width: 283px;
+            height: 200px;
+            border-radius: 360px;
+            
+        }
+        .fet>h4{
+        
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            color: cornsilk;
+        }
+
+       label{
+        font-size: 25px;
+        color: silver;
+        margin-top: 15px;
+       }
+        @media screen and (max-width:1000px)
+        {
+            body{
+                height: max-content;
+            }
+            .fetur{
+                width: max-content;
+            }
+            .nav{
+                display: flex;
+                flex-wrap: nowrap;
+                gap:5px;
+                height: 100px;
+            width: 100%;
+            }
+            .item1,.item2,.item3,.item4{
+                font-size: 20px;
+                margin: 0px;
+                padding: 0px;
+                height: 70px;
+            }
+            .boxmain{
+                position: relative;
+                top:70px;
+                width: max-content;
+                display: block;
+              height: 650px;
+            }
+            .mainbar{
+                display: flex;
+                flex-wrap: nowrap;
+                width: 1200px;
+                height: fit-content;
+                justify-content: center;
+            }
+            .topall{
+                width: 0px;
+            }
+            .logo{
+                display: flex;
+                position: relative;
+                top:20px;
+                right: 50px;
+               margin-right: 50px;
+                left: 0px;
+                justify-content: flex-start;
+                overflow: scroll;
+            }
+            #client img{
+                width: 283;
+            }
+            .fetur{
+                padding: 0px;
+            }
+            .navbar{
+                grid-column: span 3;
+            }
+            .home{
+                width: 100%;
+                grid-column: span 2;
+            }
+            .navbar>img{
+                width: 100%;
+                height: 400px;
+            }
+            .logo>img{
+                display: inline;
+            }
+            .logo>input{
+            border: 2px solid burlywood;
+            border-radius: 30px;
+            width: 180px;
+            padding: 10px 150px;
+            padding-left: 5px;
+            display: inline;
+            position: relative;
+            margin-left: 0px;
+           
+            content: "";
+            background-color: silver;
+            font-weight: 400;
+            color: black;
+            font-size: 18px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            z-index: 3;
+        }
+            .box{
+                display: flex; 
+                justify-content: flex-start;
+
+            }
+        .sub{
+            height: fit-content;
+            width: 300px;
+       
+        }
+            .boxmain>h3{
+              text-align: center;
+        
+            }
+            .contact{
+                position: static;
+                width: 1200px;
+                background-position-x: center;
+            }
+            .boxmain>h4,.fet>h4{
+                position: relative;
+                left: 330px;
+            }
+        
+            .boxmain>h4{
+                position: relative;
+                left: 150px;
+            }
+            h4{
+                justify-self: center;
+                position: static;
+                text-align: center;
+            }
+            label,.contact>input{
+                display: block;
+            }
+            .navbar>img{
+                width: 200px;
+
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+        <div class="topall">
+        <div class="nav">
+            <div class="item1"><a href="#">HOME</a></div>
+            <div class="item2"><a href="#client">OUR CLIENTS</a></div>
+            <div class="item3"><a href="#con">CONTACT US</a></div>
+            <div class="item4"><a href="#ser">SERVICES</a></div>
+        </div>
+        <div class="mainbar">
+            <div class="navbar">
+                <img src="./bg_food_delivery.avif" alt="bg">
+            </div>
+            <div class="home"><h4>Welcome to Quick Delivery</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa quia natus molestiae iste inventore ipsum. Vel adipisci explicabo commodi voluptatum voluptatibus, eius praesentium molestiae modi tenetur excepturi rem minima delectus provident perferendis quam harum.</p>
+                                <button><a href="#">ORDER NOW</a></button>
+            </div>
+            
+                <div class="logo">
+                    <img src="./food_delivery_logo.png" alt="">
+                    <input type="text" placeholder="search this website...">
+                </div>
+            </div>
+
+        </div>
+        <div class="boxmain" id="ser">
+                    <h4>Our Services:</h4>
+        <div class="box">
+            <div class="sub"  id="sub1">
+                <img src="pizza_image.jpg" alt="pizza_image">
+                <h3>FOOD ORDERING:</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quisquam quia inventore est, maiores commodi velit voluptatum? Amet dolorum voluptate sapiente commodi ducimus vero magnam, quisquam laborum libero, quas eligendi optio rerum veniam velit exercitationem, nesciunt neque deserunt atque soluta sit beatae architecto aliquam! Maiores tenetur porro consequatur optio eum libero saepe! Error exercitationem, voluptate quae possimus porro similique vitae architecto nostrum officiis, totam, neque quia quibusdam. Sit, quos quisquam!</p>         
+               </div>
+            <div class="sub" id="sub2">
+                <img src="./food_image.png" alt="pizza_image">
+                <h3>CATERING:</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quisquam quia inventore est, maiores commodi velit voluptatum? Amet dolorum voluptate sapiente commodi ducimus vero magnam, quisquam laborum libero, quas eligendi optio rerum veniam velit exercitationem, nesciunt neque deserunt atque soluta sit beatae architecto aliquam! Maiores tenetur porro consequatur optio eum libero saepe! Error exercitationem, voluptate quae possimus porro similique vitae architecto nostrum officiis, totam, neque quia quibusdam. Sit, quos quisquam!</p>   
+            </div>
+            <div class="sub" id="sub3">
+                <img src="delivery_man.png" alt="">
+                <h3>BULK ORDERING:</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quisquam quia inventore est, maiores commodi velit voluptatum? Amet dolorum voluptate sapiente commodi ducimus vero magnam, quisquam laborum libero, quas eligendi optio rerum veniam velit exercitationem, nesciunt neque deserunt atque soluta sit beatae architecto aliquam! Maiores tenetur porro consequatur optio eum libero saepe! Error exercitationem, voluptate quae possimus porro similique vitae architecto nostrum officiis, totam, neque quia quibusdam. Sit, quos quisquam!</p>   
+            
+            </div>
+        </div>
+    </div>
+
+       
+        <div id="client" class="fet">
+            <h4>Our Clients:</h4>
+            <div class="fetur">
+                <img src="./hp_logo.png" alt="">
+                <img src="./microsoft_logo.png" alt="">
+                <img src="./intel_logo.png" alt="">
+                <img src="apple logo.png" alt="">
+            </div>
+        </div>
+        <form action="noaction.php">
+        <div id="con"class="contact">
+            <h4>Contact us</h4>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Your Name...">
+            <label for="name">Email:</label>
+            <input type="text" placeholder="Enter email...">
+            <label for="name">Phone Number:</label>
+            <input type="text" placeholder="Enter Phone Number...">
+            <label for="name">Message:</label>
+            <textarea name="msg" id="msg" placeholder="Enter message..."></textarea>
+        </form>
+        </div>
+</body>
+
+</html>
